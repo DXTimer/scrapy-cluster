@@ -3,21 +3,23 @@ MAINTAINER Madison Bahmer <madison.bahmer@istresearch.com>
 
 # os setup
 RUN apt-get update
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+
+ENV APP_HOME /usr/src/app
+RUN mkdir -p ${APP_HOME}
+WORKDIR ${APP_HOME}
 
 # install requirements
-COPY redis-monitor/requirements.txt /usr/src/app/
+COPY requirements.txt ${APP_HOME}/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # move codebase over
-COPY redis-monitor /usr/src/app
+COPY . ${APP_HOME}
 
 # override settings via localsettings.py
-COPY docker/redis-monitor/settings.py /usr/src/app/localsettings.py
+COPY config/docker/settings.py ${APP_HOME}/localsettings.py
 
 # copy testing script into container
-COPY docker/run_docker_tests.sh /usr/src/app/run_docker_tests.sh
+COPY scripts/run_docker_tests.sh ${APP_HOME}/run_docker_tests.sh
 
 # set up environment variables
 

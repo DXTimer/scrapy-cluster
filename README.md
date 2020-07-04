@@ -34,20 +34,23 @@ This project tries to bring together a bunch of new concepts to Scrapy and large
 - Allows for coordinated throttling of crawls from independent spiders on separate machines, but behind the same IP Address
 - Enables completely different spiders to yield crawl requests to each other, giving flexibility to how the crawl job is tackled
 
-## Scrapy Cluster test environment
+## Scrapy Cluster development
 
-To set up a pre-canned Scrapy Cluster test environment, make sure you have the latest **Virtualbox** + **Vagrant >= 1.7.4** installed.  Vagrant will automatically mount the base **scrapy-cluster** directory to the **/vagrant** directory, so any code changes you make will be visible inside the VM. Please note that at time of writing this will not work on a [Windows](http://docs.ansible.com/ansible/intro_installation.html#control-machine-requirements) machine.
+Docker
+======
 
-### Steps to launch the test environment:
-1.  `vagrant up` in base **scrapy-cluster** directory.
-2.  `vagrant ssh` to ssh into the VM.
-3.  `sudo supervisorctl status` to check that everything is running.
-4.  `virtualenv sc` to create a virtual environment
-5.  `source sc/bin/activate` to activate the virtual environment
-6.  `cd /vagrant` to get to the **scrapy-cluster** directory.
-7.  `pip install -r requirements.txt` to install Scrapy Cluster dependencies.
-8.  `./run_offline_tests.sh` to run offline tests.
-9.  `./run_online_tests.sh` to run online tests (relies on kafka, zookeeper, redis).
+Each service houses a `config/docker/settings.py` file that overrides default configs for use in Docker.
+
+For more information please check out the [documentation](http://scrapy-cluster.readthedocs.org)
+
+To provision all services for development use `docker-compose up`. Note that at present `crawler` might fail to start due to its dependency on `kafka` and it's slow start-up.
+
+To build a service container you can follow the below example:
+
+```
+$ cd crawler
+$ docker build -t crawler:1.2 .
+```
 
 ## Documentation
 
@@ -55,6 +58,6 @@ Please check out the official [Scrapy Cluster 1.2.1 documentation](http://scrapy
 
 ## Branches
 
-The `master` branch of this repository contains the latest stable release code for `Scrapy Cluster 1.2.1`.
+The `main` branch of this repository contains the latest stable release code for `Scrapy Cluster 1.2.1`.
 
 The `dev` branch contains bleeding edge code and is currently working towards [Scrapy Cluster 1.3](https://github.com/istresearch/scrapy-cluster/milestone/3). Please note that not everything may be documented, finished, tested, or finalized but we are happy to help guide those who are interested.

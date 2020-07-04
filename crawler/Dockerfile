@@ -11,21 +11,23 @@ RUN apt-get update && apt-get -y install \
   libxml2-dev \
   libxslt1-dev \
   && rm -rf /var/lib/apt/lists/*
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+
+ENV APP_HOME /usr/src/app
+RUN mkdir -p ${APP_HOME}
+WORKDIR ${APP_HOME}
 
 # install requirements
-COPY crawler/requirements.txt /usr/src/app/
+COPY requirements.txt ${APP_HOME}/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # move codebase over
-COPY crawler /usr/src/app
+COPY . ${APP_HOME}
 
 # override settings via localsettings.py
-COPY docker/crawler/settings.py /usr/src/app/crawling/localsettings.py
+COPY config/docker/settings.py ${APP_HOME}/crawling/localsettings.py
 
 # copy testing script into container
-COPY docker/run_docker_tests.sh /usr/src/app/run_docker_tests.sh
+COPY scripts/run_docker_tests.sh ${APP_HOME}/run_docker_tests.sh
 
 # set up environment variables
 

@@ -17,7 +17,8 @@ services:
     restart: always
 
   crawler:
-    image: istresearch/scrapy-cluster:crawler-1.2.1
+    build:
+      context: ./crawler
     depends_on:
       - kafka
       - redis

@@ -1,0 +1,364 @@
+[[package]]
+category = "main"
+description = "Concurrent logging handler (drop-in replacement for RotatingFileHandler) Python 2.6+"
+name = "concurrentloghandler"
+optional = false
+python-versions = "*"
+version = "0.9.1"
+
+[[package]]
+category = "main"
+description = "Python function signatures from PEP362 for Python 2.6, 2.7 and 3.2+"
+name = "funcsigs"
+optional = false
+python-versions = "*"
+version = "1.0.2"
+
+[[package]]
+category = "main"
+description = "Backport of the functools module from Python 3.2.3 for use on 2.7 and PyPy."
+marker = "python_version == \"2.7\""
+name = "functools32"
+optional = false
+python-versions = "*"
+version = "3.2.3-2"
+
+[[package]]
+category = "main"
+description = "Clean single-source support for Python 3 and 2"
+name = "future"
+optional = false
+python-versions = "*"
+version = "0.16.0"
+
+[[package]]
+category = "main"
+description = "Internationalized Domain Names in Applications (IDNA)"
+name = "idna"
+optional = false
+python-versions = "*"
+version = "2.5"
+
+[[package]]
+category = "main"
+description = "An implementation of JSON Schema validation for Python"
+name = "jsonschema"
+optional = false
+python-versions = "*"
+version = "2.6.0"
+
+[package.dependencies]
+[package.dependencies.functools32]
+python = ">=2.7,<2.8"
+version = "*"
+
+[package.extras]
+format = ["rfc3987", "strict-rfc3339", "webcolors"]
+
+[[package]]
+category = "main"
+description = "Pure Python client for Apache Kafka"
+name = "kafka-python"
+optional = false
+python-versions = "*"
+version = "1.3.3"
+
+[[package]]
+category = "main"
+description = "Higher Level Zookeeper Client"
+name = "kazoo"
+optional = false
+python-versions = "*"
+version = "2.2.1"
+
+[package.dependencies]
+six = "*"
+
+[package.extras]
+test = ["six", "coverage", "mock", "nose", "flake8", "gevent", "eventlet"]
+
+[[package]]
+category = "main"
+description = "Rolling backport of unittest.mock for all Pythons"
+name = "mock"
+optional = false
+python-versions = "*"
+version = "2.0.0"
+
+[package.dependencies]
+pbr = ">=0.11"
+six = ">=1.9"
+
+[package.dependencies.funcsigs]
+python = "<3.3"
+version = ">=1"
+
+[package.extras]
+docs = ["sphinx", "Pygments (<2)", "jinja2 (<2.7)", "sphinx (<1.3)"]
+test = ["unittest2 (>=1.1.0)"]
+
+[[package]]
+category = "main"
+description = "nose extends unittest to make testing easier"
+name = "nose"
+optional = false
+python-versions = "*"
+version = "1.3.7"
+
+[[package]]
+category = "main"
+description = "Python Build Reasonableness"
+name = "pbr"
+optional = false
+python-versions = "*"
+version = "2.0.0"
+
+[[package]]
+category = "main"
+description = "A python library adding a json log formatter"
+name = "python-json-logger"
+optional = false
+python-versions = "*"
+version = "0.1.7"
+
+[package.dependencies]
+setuptools = "*"
+
+[[package]]
+category = "main"
+description = "Lock context manager implemented via redis SETNX/BLPOP."
+name = "python-redis-lock"
+optional = false
+python-versions = "*"
+version = "3.2.0"
+
+[package.dependencies]
+redis = ">=2.10.0"
+
+[package.extras]
+django = ["django-redis (>=3.8.0)"]
+
+[[package]]
+category = "main"
+description = "YAML parser and emitter for Python"
+name = "pyyaml"
+optional = false
+python-versions = "*"
+version = "3.12"
+
+[[package]]
+category = "main"
+description = "Python client for Redis key-value store"
+name = "redis"
+optional = false
+python-versions = "*"
+version = "2.10.5"
+
+[[package]]
+category = "main"
+description = "Python HTTP for Humans."
+name = "requests"
+optional = false
+python-versions = "*"
+version = "2.13.0"
+
+[package.extras]
+security = ["cryptography (>=1.3.4)", "idna (>=2.0.0)", "pyOpenSSL (>=0.14)"]
+socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7)"]
+
+[[package]]
+category = "main"
+description = "File transport adapter for Requests"
+name = "requests-file"
+optional = false
+python-versions = "*"
+version = "1.4.1"
+
+[package.dependencies]
+requests = ">=1.0.0"
+six = "*"
+
+[[package]]
+category = "main"
+description = "Retrying"
+name = "retrying"
+optional = false
+python-versions = "*"
+version = "1.3.3"
+
+[package.dependencies]
+six = ">=1.7.0"
+
+[[package]]
+category = "main"
+description = "Utilities for Scrapy Cluster"
+name = "scutils"
+optional = false
+python-versions = "*"
+version = "1.2.0"
+
+[package.dependencies]
+ConcurrentLogHandler = ">=0.9.1"
+future = "0.16.0"
+kazoo = ">=2.2.1"
+mock = "2.0.0"
+python-json-logger = "0.1.7"
+redis = "2.10.5"
+testfixtures = "4.13.5"
+ujson = "1.35"
+
+[package.extras]
+all = ["python-json-logger (0.1.7)", "ConcurrentLogHandler (>=0.9.1)", "redis (2.10.5)", "kazoo (>=2.2.1)", "mock (2.0.0)", "testfixtures (4.13.5)", "ujson (1.35)", "future (0.16.0)", "mock (2.0.0)", "testfixtures (4.13.5)"]
+docs = ["sphinx", "mock (2.0.0)", "testfixtures (4.13.5)"]
+lint = ["pep8", "pyflakes"]
+test = ["mock (2.0.0)", "testfixtures (4.13.5)"]
+
+[[package]]
+category = "main"
+description = "Python 2 and 3 compatibility utilities"
+name = "six"
+optional = false
+python-versions = "*"
+version = "1.10.0"
+
+[[package]]
+category = "main"
+description = "A collection of helpers and mock objects for unit tests and doc tests."
+name = "testfixtures"
+optional = false
+python-versions = "*"
+version = "4.13.5"
+
+[package.extras]
+build = ["pkginfo", "setuptools-git", "sphinx", "twine", "wheel"]
+test = ["coveralls", "manuel", "mock", "nose", "nose-cov", "nose-fixes", "zope.component"]
+
+[[package]]
+category = "main"
+description = "Accurately separate the TLD from the registered domain andsubdomains of a URL, using the Public Suffix List."
+name = "tldextract"
+optional = false
+python-versions = "*"
+version = "2.0.2"
+
+[package.dependencies]
+idna = "*"
+requests = ">=2.1.0"
+requests-file = ">=1.4"
+setuptools = "*"
+
+[[package]]
+category = "main"
+description = "Ultra fast JSON encoder and decoder for Python"
+name = "ujson"
+optional = false
+python-versions = "*"
+version = "1.35"
+
+[metadata]
+content-hash = "6aa2ec1c36c010dc3700f67575ba878a1d0ba5d61d02949483f43363fe9ec08a"
+python-versions = "~2.7.1"
+
+[metadata.files]
+concurrentloghandler = [
+    {file = "ConcurrentLogHandler-0.9.1-py2.6.egg", hash = "sha256:5d199eecc23751ab1f705826660f733c1090f62789f3e3c44296e706fc75b547"},
+    {file = "ConcurrentLogHandler-0.9.1-py2.7.egg", hash = "sha256:aa608aa0ce32d86d2061dec91cd58a2a367f97110851529d2aa6ebf96d9dcd4d"},
+    {file = "ConcurrentLogHandler-0.9.1-py3.2.egg", hash = "sha256:4ccae08b7f9b3257de35f847e2de8629c00c2075f8ce66db8ed06d7657e2eeae"},
+    {file = "ConcurrentLogHandler-0.9.1.tar.gz", hash = "sha256:8225a590fd4194c413fa26675bde5f6b80ad79e4182d5876ba3e264f77755918"},
+]
+funcsigs = [
+    {file = "funcsigs-1.0.2-py2.py3-none-any.whl", hash = "sha256:330cc27ccbf7f1e992e69fef78261dc7c6569012cf397db8d3de0234e6c937ca"},
+    {file = "funcsigs-1.0.2.tar.gz", hash = "sha256:a7bb0f2cf3a3fd1ab2732cb49eba4252c2af4240442415b4abce3b87022a8f50"},
+]
+functools32 = [
+    {file = "functools32-3.2.3-2.tar.gz", hash = "sha256:f6253dfbe0538ad2e387bd8fdfd9293c925d63553f5813c4e587745416501e6d"},
+    {file = "functools32-3.2.3-2.zip", hash = "sha256:89d824aa6c358c421a234d7f9ee0bd75933a67c29588ce50aaa3acdf4d403fa0"},
+]
+future = [
+    {file = "future-0.16.0.tar.gz", hash = "sha256:e39ced1ab767b5936646cedba8bcce582398233d6a627067d4c6a454c90cfedb"},
+]
+idna = [
+    {file = "idna-2.5-py2.py3-none-any.whl", hash = "sha256:cc19709fd6d0cbfed39ea875d29ba6d4e22c0cebc510a76d6302a28385e8bb70"},
+    {file = "idna-2.5.tar.gz", hash = "sha256:3cb5ce08046c4e3a560fc02f138d0ac63e00f8ce5901a56b32ec8b7994082aab"},
+]
+jsonschema = [
+    {file = "jsonschema-2.6.0-py2.py3-none-any.whl", hash = "sha256:000e68abd33c972a5248544925a0cae7d1125f9bf6c58280d37546b946769a08"},
+    {file = "jsonschema-2.6.0.tar.gz", hash = "sha256:6ff5f3180870836cae40f06fa10419f557208175f13ad7bc26caa77beb1f6e02"},
+]
+kafka-python = [
+    {file = "kafka-python-1.3.3.tar.gz", hash = "sha256:467d4a3e09bfaf8fbbbbc458616afc8ff99d71e61642ce1dec39f738878a2d44"},
+    {file = "kafka_python-1.3.3-py2.py3-none-any.whl", hash = "sha256:c7c281299ed44b86f9a17ed55d9aac38eb5a2089962bc63f703faa67ff2f959b"},
+]
+kazoo = [
+    {file = "kazoo-2.2.1-py2.py3-none-any.whl", hash = "sha256:2c59532d2d93f102059a0541b4b71193bcb0cef5e6ba9d776167ba28dec020dd"},
+    {file = "kazoo-2.2.1.tar.gz", hash = "sha256:525a9959b98a1203530bee01446b365a9f7f1caa69399af0151127178941eb82"},
+]
+mock = [
+    {file = "mock-2.0.0-py2.py3-none-any.whl", hash = "sha256:5ce3c71c5545b472da17b72268978914d0252980348636840bd34a00b5cc96c1"},
+    {file = "mock-2.0.0.tar.gz", hash = "sha256:b158b6df76edd239b8208d481dc46b6afd45a846b7812ff0ce58971cf5bc8bba"},
+]
+nose = [
+    {file = "nose-1.3.7-py2-none-any.whl", hash = "sha256:dadcddc0aefbf99eea214e0f1232b94f2fa9bd98fa8353711dacb112bfcbbb2a"},
+    {file = "nose-1.3.7-py3-none-any.whl", hash = "sha256:9ff7c6cc443f8c51994b34a667bbcf45afd6d945be7477b52e97516fd17c53ac"},
+    {file = "nose-1.3.7.tar.gz", hash = "sha256:f1bffef9cbc82628f6e7d7b40d7e255aefaa1adb6a1b1d26c69a8b79e6208a98"},
+]
+pbr = [
+    {file = "pbr-2.0.0-py2.py3-none-any.whl", hash = "sha256:d9b69a26a5cb4e3898eb3c5cea54d2ab3332382167f04e30db5e1f54e1945e45"},
+    {file = "pbr-2.0.0.tar.gz", hash = "sha256:0ccd2db529afd070df815b1521f01401d43de03941170f8a800e7531faba265d"},
+]
+python-json-logger = [
+    {file = "python-json-logger-0.1.7.tar.gz", hash = "sha256:aeee3edcf155e1d8bf2fb11330b7cc24b2a9488607d8a96ff7dd7db0a002b4d3"},
+]
+python-redis-lock = [
+    {file = "python-redis-lock-3.2.0.tar.gz", hash = "sha256:f308dda75449cba1155c5b6f8ebaa0dc1a25f6964ca4dc2a2ac889ff334b4237"},
+    {file = "python_redis_lock-3.2.0-py2.py3-none-any.whl", hash = "sha256:52e8d70aa5c6b04ffe257696c7a8fa212dc0f10e0ff93dd87664c430febe0449"},
+]
+pyyaml = [
+    {file = "PyYAML-3.12-cp27-cp27m-win32.whl", hash = "sha256:3262c96a1ca437e7e4763e2843746588a965426550f3797a79fca9c6199c431f"},
+    {file = "PyYAML-3.12-cp27-cp27m-win_amd64.whl", hash = "sha256:16b20e970597e051997d90dc2cddc713a2876c47e3d92d59ee198700c5427736"},
+    {file = "PyYAML-3.12-cp34-cp34m-win32.whl", hash = "sha256:e863072cdf4c72eebf179342c94e6989c67185842d9997960b3e69290b2fa269"},
+    {file = "PyYAML-3.12-cp34-cp34m-win_amd64.whl", hash = "sha256:bc6bced57f826ca7cb5125a10b23fd0f2fff3b7c4701d64c439a300ce665fff8"},
+    {file = "PyYAML-3.12-cp35-cp35m-win32.whl", hash = "sha256:c01b880ec30b5a6e6aa67b09a2fe3fb30473008c85cd6a67359a1b15ed6d83a4"},
+    {file = "PyYAML-3.12-cp35-cp35m-win_amd64.whl", hash = "sha256:827dc04b8fa7d07c44de11fabbc888e627fa8293b695e0f99cb544fdfa1bf0d1"},
+    {file = "PyYAML-3.12.tar.gz", hash = "sha256:592766c6303207a20efc445587778322d7f73b161bd994f227adaa341ba212ab"},
+    {file = "PyYAML-3.12.win-amd64-py2.7.exe", hash = "sha256:ca233c64c6e40eaa6c66ef97058cdc80e8d0157a443655baa1b2966e812807ca"},
+    {file = "PyYAML-3.12.win-amd64-py3.4.exe", hash = "sha256:4474f8ea030b5127225b8894d626bb66c01cda098d47a2b0d3429b6700af9fd8"},
+    {file = "PyYAML-3.12.win-amd64-py3.5.exe", hash = "sha256:326420cbb492172dec84b0f65c80942de6cedb5233c413dd824483989c000608"},
+    {file = "PyYAML-3.12.win32-py2.7.exe", hash = "sha256:5f84523c076ad14ff5e6c037fe1c89a7f73a3e04cf0377cb4d017014976433f3"},
+    {file = "PyYAML-3.12.win32-py3.4.exe", hash = "sha256:0c507b7f74b3d2dd4d1322ec8a94794927305ab4cebbe89cc47fe5e81541e6e8"},
+    {file = "PyYAML-3.12.win32-py3.5.exe", hash = "sha256:b4c423ab23291d3945ac61346feeb9a0dc4184999ede5e7c43e1ffb975130ae6"},
+    {file = "PyYAML-3.12.zip", hash = "sha256:5ac82e411044fb129bae5cfbeb3ba626acb2af31a8d17d175004b70862a741a7"},
+]
+redis = [
+    {file = "redis-2.10.5-py2.py3-none-any.whl", hash = "sha256:97156b37d7cda4e7d8658be1148c983984e1a975090ba458cc7e244025191dbd"},
+    {file = "redis-2.10.5.tar.gz", hash = "sha256:5dfbae6acfc54edf0a7a415b99e0b21c0a3c27a7f787b292eea727b1facc5533"},
+]
+requests = [
+    {file = "requests-2.13.0-py2.py3-none-any.whl", hash = "sha256:1a720e8862a41aa22e339373b526f508ef0c8988baf48b84d3fc891a8e237efb"},
+    {file = "requests-2.13.0.tar.gz", hash = "sha256:5722cd09762faa01276230270ff16af7acf7c5c45d623868d9ba116f15791ce8"},
+]
+requests-file = [
+    {file = "requests-file-1.4.1.tar.gz", hash = "sha256:d75823cccd271caa7303304f9f7d44e12db9f77d844491c5ec9bd44af0844ebc"},
+    {file = "requests_file-1.4.1-py2.py3-none-any.whl", hash = "sha256:8b3927545f8ccd424fce30ca5987a0561db1598f811f7bdff124c24b33a057cf"},
+]
+retrying = [
+    {file = "retrying-1.3.3.tar.gz", hash = "sha256:08c039560a6da2fe4f2c426d0766e284d3b736e355f8dd24b37367b0bb41973b"},
+]
+scutils = [
+    {file = "scutils-1.2.0.tar.gz", hash = "sha256:2193e5733d9da2f6a2c91aa204f5d91d0c2d3a7ec61c65159a546d56ebbbf555"},
+]
+six = [
+    {file = "six-1.10.0-py2.py3-none-any.whl", hash = "sha256:0ff78c403d9bccf5a425a6d31a12aa6b47f1c21ca4dc2573a7e2f32a97335eb1"},
+    {file = "six-1.10.0.tar.gz", hash = "sha256:105f8d68616f8248e24bf0e9372ef04d3cc10104f1980f54d57b2ce73a5ad56a"},
+]
+testfixtures = [
+    {file = "testfixtures-4.13.5-py2.py3-none-any.whl", hash = "sha256:63c04739a033b56ebf9ffb6f59eeae6cc463685e1f3b19f4a3a5ab87a591c560"},
+    {file = "testfixtures-4.13.5.tar.gz", hash = "sha256:b257c9877fe7829115efc4949635de4a5fa79bf9160db34988c9f166b2e78987"},
+]
+tldextract = [
+    {file = "tldextract-2.0.2-py2.py3-none-any.whl", hash = "sha256:89934e9db5ce943cf3a0ec65b28e45821f53b88ed04c81829954d0062daba2d5"},
+    {file = "tldextract-2.0.2.tar.gz", hash = "sha256:3d6050d48803eef7a3e3a92b840f46477761d4423fe90f68e57b420fec7f19ab"},
+]
+ujson = [
+    {file = "ujson-1.35.tar.gz", hash = "sha256:f66073e5506e91d204ab0c614a148d5aa938bdbf104751be66f8ad7a222f5f86"},
+]

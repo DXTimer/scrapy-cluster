@@ -42,7 +42,7 @@ COPY poetry.lock pyproject.toml ./
 RUN poetry install
 
 # ------------------------------------------------------------------------------
-# Test runner image for use in docker-compose context
+# Final production container
 # ------------------------------------------------------------------------------
 FROM deps as final
 WORKDIR ${APP_HOME}

@@ -69,6 +69,10 @@ The `dev` branch contains bleeding edge code and is currently working towards [S
 - [ ] migrate redis-monitor to poetry
 - [ ] Migrate rest to poetry
 - [ ] Improve the test harness by having a separate `docker-compose.test.yml` for local and CI
+- [ ] Fix flaky specs
 - [ ] Migrate to Python 3.7+
   - [ ] Update core dependencies for Scrapy, Twisted, Kafka and Redis
+  - [ ] Add code formatter
 - [ ] Helm chart (will require exploritory work)
+- [ ] UI - covering basic operation and observability of the jobs
+- [ ] Prometheus integration

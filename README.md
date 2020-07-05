@@ -61,3 +61,14 @@ Please check out the official [Scrapy Cluster 1.2.1 documentation](http://scrapy
 The `main` branch of this repository contains the latest stable release code for `Scrapy Cluster 1.2.1`.
 
 The `dev` branch contains bleeding edge code and is currently working towards [Scrapy Cluster 1.3](https://github.com/istresearch/scrapy-cluster/milestone/3). Please note that not everything may be documented, finished, tested, or finalized but we are happy to help guide those who are interested.
+
+## To-do
+
+- [ ] Migrate crawler to poetry
+- [ ] Migrate kafka-monitor to poetry
+- [ ] migrate redis-monitor to poetry
+- [ ] Migrate rest to poetry
+- [ ] Improve the test harness by having a separate `docker-compose.test.yml` for local and CI
+- [ ] Migrate to Python 3.7+
+  - [ ] Update core dependencies for Scrapy, Twisted, Kafka and Redis
+- [ ] Helm chart (will require exploritory work)

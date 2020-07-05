@@ -2,7 +2,6 @@ version: "3"
 
 services:
   kafka_monitor:
-    # image: istresearch/scrapy-cluster:kafka-monitor-1.2.1
     build:
       context: ./kafka-monitor
     depends_on:
@@ -11,7 +10,8 @@ services:
     restart: always
 
   redis_monitor:
-    image: istresearch/scrapy-cluster:redis-monitor-1.2.1
+    build:
+      context: ./redis-monitor
     depends_on:
       - kafka
       - redis
@@ -61,6 +61,19 @@ services:
     depends_on:
       - zookeeper
     restart: always
+
+  # Convenient way to start key services only
+  # Start with: docker-compose up dev
+  dev:
+    image: alpine # This image doesn't run anything, but allows us to have links
+    links:
+      - zookeeper
+      - kafka
+      - redis
+      - kafka_monitor
+      - redis_monitor
+      - crawler
+      - rest
 
   tests:
     build:

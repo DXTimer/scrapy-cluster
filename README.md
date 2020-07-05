@@ -73,6 +73,8 @@ The `dev` branch contains bleeding edge code and is currently working towards [S
 - [ ] Migrate to Python 3.7+
   - [ ] Update core dependencies for Scrapy, Twisted, Kafka and Redis
   - [ ] Add code formatter
+  - [ ] Add dependabot
+  - [ ] Add CI
 - [ ] Helm chart (will require exploritory work)
 - [ ] UI - covering basic operation and observability of the jobs
 - [ ] Prometheus integration
